@@ -1,0 +1,147 @@
+body {
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(75,0,130,0.08);
+  padding: 32px 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.quiz-title {
+  color: #4B0082;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.question {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.option-btn {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: #f0f0f0;
+  color: #4B0082;
+  border: 2px solid #4B0082;
+  border-radius: 8px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  outline: none;
+}
+
+.option-btn.selected {
+  background: #4B0082;
+  color: #fff;
+  transform: scale(1.04);
+}
+
+.option-btn.correct {
+  background: #4B0082;
+  color: #fff;
+  border-color: #4B0082;
+  box-shadow: 0 0 8px #4B008244;
+}
+
+.option-btn.wrong {
+  background: #ffdddd;
+  color: #d8000c;
+  border-color: #d8000c;
+}
+
+.next-btn {
+  background: #4B0082;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(75,0,130,0.08);
+  outline: none;
+  opacity: 0.7;
+}
+
+.next-btn.enabled {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.score {
+  color: #4B0082;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.play-again-btn {
+  background: #fff;
+  color: #4B0082;
+  border: 2px solid #4B0082;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 8px;
+}
+
+.play-again-btn:hover {
+  background: #4B0082;
+  color: #fff;
+  transform: scale(1.04);
+}
+
+@media (max-width: 500px) {
+  .quiz-container {
+    padding: 18px 6px;
+    max-width: 98vw;
+  }
+  .quiz-title {
+    font-size: 1.3rem;
+  }
+  .question {
+    font-size: 16px;
+  }
+  .option-btn, .next-btn, .play-again-btn {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
