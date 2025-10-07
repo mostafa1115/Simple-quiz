@@ -142,6 +142,6 @@ body {
   }
   .option-btn, .next-btn, .play-again-btn {
     font-size: 15px;
-    padding: 10px 0;
+    padding: 10px ;
   }
 }
